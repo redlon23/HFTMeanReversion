@@ -1,0 +1,56 @@
+LicenceKey: <Your Licence Key>
+
+# Select desired exchange platform to trade, { BinancePerpetual | BybitUsdtPerpetual | BybitInverse }
+platform: BybitUsdtPerpetual
+
+publicKey: <Public Api Key>
+secretKey: <Secret Api Key>
+
+# Specify which symbol you want to trade
+symbol: BTCUSDT
+
+# How often you want to check position PNL
+interval: 10
+
+openPosition:
+  # Choose a side to trade, { Buy | Sell }
+  tradingSide: Buy
+  # Enable or Disable auto open position, { true | false }, we suggest turning this off and enter positions manually or by TV alerts and let the bot manage your position
+  autoOpenPosition: true
+  # How long the bot should wait between closing a position and opening a new one { integer }
+  coolDownInSeconds: 900
+
+
+managePosition:
+  # Your first order size { float }
+  firstOrderSize: 0.001
+  # This number will multiply your first order size each order to average in{ float }
+  orderSizeMultiplier: 1
+  # How far away your orders will be from each other
+  orderSpreadPercentage: 0.1
+  # How much of a downside you want to cover in percentage
+  coveragePercentage: 100
+  # In order to see different risk metrics and money management practices please check documentation
+
+closePosition:
+  # Choose a type of tp to use, { Limit | Trailing }
+  typeOfTp: Trailing
+
+  limitTpPercentage: 0.1
+
+  # If typeOfTp is trailing, these settings will be used, otherwise
+  # they have no affect on limit tp process.
+
+  # Indicates when the bot will start trailing, { float }
+  trailingStart: 0.25
+  # Indicates how far behind it will trail tp order to be placed, { float }
+  trailingPercentage: 0.05
+
+
+
+lossPosition:
+  # Enable or Disable stop loss functionality, { true | false }
+  useStopLoss: false
+
+  # Indicates...
+  stopLossPercentage: 1
