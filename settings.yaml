@@ -45,6 +45,8 @@ managePosition:
   # How much of a downside you want to cover in percentage
   coveragePercentage: 100
   # In order to see different risk metrics and money management practices please check documentation
+	
+  orderSpreadMultiplier: 2
 
 closePosition:
   # Choose a type of tp to use, { Limit | Trailing }
