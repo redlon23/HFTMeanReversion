@@ -19,6 +19,20 @@ openPosition:
   autoOpenPosition: true
   # How long the bot should wait between closing a position and opening a new one { integer }
   coolDownInSeconds: 900
+  # Enable or Disable SMA(simple moving average), { true | false }
+  useSMA: false
+  # Length of SMA { integer }
+  smaLength: 100
+  # Time Frame - Interval { min1 | min3 | min5 | min15 | min30 | min60 | min120 |
+  #                        min240 | min360 | min720 | day | month | week }
+  smaTimeFrame: min60
+  # Enable or Disable Bollinger Bands(BB), { true | false }
+  useBB: true
+  # Length of Bollinger Bands { integer }
+  bbLength: 20
+  # Time Frame - Interval { min1 | min3 | min5 | min15 | min30 | min60 | min120 |
+  #                        min240 | min360 | min720 | day | month | week }
+  bbTimeFrame: min1
 
 
 managePosition:
